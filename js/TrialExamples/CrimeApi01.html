@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+    <h1>Crime Data For year 2016</h1>
+    <h2>East Precinct:Capitol Hill, Central Area, First Hill, Judkins Park, Madison Park, Montlake, upper Pike/Pine neighborhood</h2>
+    <div id="EastCrime">Total Crimes in East Precinct:</div>
+    <h2>West Precinct:Downtown Business District, Waterfront, International District, Pioneer Square, Belltown, Queen Anne, West Edge, SoDo, Westlake, Eastlake, Seattle Center, Denny Triangle, Magnolia, South Lake Union</h2>
+    <div id="WestCrime">Total Crimes in West Precinct:</div>
+    <script>
+    $.ajax({
+        url: "https://data.seattle.gov/resource/y7pv-r3kh.json",
+        type: "GET",
+
+    }).done(function(data) {
+        var eastCount = 0;
+        var westCount = 0;
+        var eastMap = new Map();
+        var westMap = new Map();
+        var filteredData = data.filter(function(obj) {
+            var eastHash = {
+                "E1": true,
+                "E2": true,
+                "E3": true,
+                "G1": true,
+                "G2": true,
+                "G3": true,
+                "C1": true,
+                "C2": true,
+                "C3": true
+            };
+
+            var westHash = {
+                "M1": true,
+                "M2": true,
+                "M3": true,
+                "K1": true,
+                "K2": true,
+                "K3": true,
+                "Q1": true,
+                "Q2": true,
+                "Q3": true,
+                "D1": true,
+                "D2": true,
+                "D3": true
+            };
+
+            if (obj.year === '2016') {
+                if (eastHash[obj.zone_beat] === true) {
+
+                    eastCount++;
+                    if (eastMap.get(obj.zone_beat) === undefined) {
+                        eastMap.set(obj.zone_beat, 1);
+                    } else {
+                        eastMap.set(obj.zone_beat, eastMap.get(obj.zone_beat) + 1);
+                    }
+                }
+
+                if (westHash[obj.zone_beat] === true) {
+                    westCount++;
+                    if (westMap.get(obj.zone_beat) === undefined) {
+                        westMap.set(obj.zone_beat, 1);
+                    } else {
+                        westMap.set(obj.zone_beat, westMap.get(obj.zone_beat) + 1);
+                    }
+                }
+            }
+
+
+
+        });
+
+        console.log(eastCount);
+        $('#EastCrime').append(eastCount + '<br/>');
+
+        console.log(westCount);
+        $('#WestCrime').append(westCount + '<br/>');
+
+        eastMap.forEach(function(value, key) {
+            $('#EastCrime').append(key + ' = ' + value + '<br/>');
+        });
+
+        westMap.forEach(function(value, key) {
+            $('#WestCrime').append(key + ' = ' + value + '<br/>');
+        });
+
+
+    });
+    </script>
+</body>
+
+</html>
