@@ -1,0 +1,100 @@
+/*styling for mobile devices*/
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px) {
+ body{
+      font-size: 1rem;
+  }
+.questionSlider{
+  background-color: #56c2ba;
+  height: 30rem;
+  border: 2px solid black;
+}
+.slider{
+  background-color: #e1b39e;
+  height: 25rem;
+  margin-top: 15%;
+}
+h1{
+  padding-top: 3%;
+  text-align: center;
+}
+.options{
+  height: 15rem;
+  width: 80%;
+  margin: 10%;
+  box-shadow: 5px 5px 5px #888888;
+}
+.selector{
+  width:6rem;
+  height: 6rem;
+  border: 2px solid #d76363;
+  font-size: 1rem;
+  margin: 4%;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #56c2ba;
+}
+#leftArrow{
+  float: left;
+}
+#rightArrow{
+  float: right;
+}
+.left-arrow, .right-arrow{
+  width: 10%;
+  background-color:#d76363;
+  height: 2rem;
+  margin-top: 60%;
+  font-size: 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+}
+/* styling for  big landscape tablets, laptops, and desktops */
+@media (min-width:1025px) {
+  .questionSlider{
+    background-color: #56c2ba;
+    height: 35rem;
+    border: 2px solid black;
+  }
+  .slider{
+    background-color: #e1b39e;
+    height: 25rem;
+    margin-top: 5%;
+    border-radius: 50px;
+  }
+  h1{
+    padding-top: 2%;
+    text-align: center;
+  }
+  .options{
+    height: 15rem;
+    width: 60%;
+    margin-left: 23%;
+    margin-right: 20%;
+  }
+  .selector{
+    width:6rem;
+    height: 6rem;
+    border: 2px solid #d76363;
+    font-size: 1rem;
+    margin: 5%;
+    background-color: #56c2ba;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px #888888;
+  }
+  #leftArrow{
+    float: left;
+  }
+  #rightArrow{
+    float: right;
+  }
+  .left-arrow, .right-arrow{
+    width: 7%;
+    background-color:#d76363;
+    margin-top: 20%;
+    cursor: pointer;
+    font-size:30px;
+  }
+}
