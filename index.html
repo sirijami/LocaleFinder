@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Locale Finder</title>
+    <link rel="stylesheet" type="text/css" href="project.css">
+    <!--start add by neha-->
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <!--end add by neha-->
+    <!--start add by rachel-->
+    <link rel="stylesheet/less" type="text/css" href="less/index.less" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Muli&effect=shadow-multiple|3d-float">
+    <script src="js/less.js" type="text/javascript"></script>
+    <!--end add by rachel-->
+    <style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #000000;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 24px 27px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active),
+    .dropdown:hover {
+        background-color: #757575;
+    }
+
+    .line {
+        width: 35px;
+        height: 5px;
+        background-color: #b5b5b5;
+        margin: 6px 0;
+    }
+
+    li.down {
+        display: inline-block;
+    }
+
+    .down-content {
+        display: none;
+        position: absolute;
+        background-color: #707070;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .down-content a {
+        color: #ffffff;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .down-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .down:hover .down-content {
+        display: block;
+    }
+
+    footer {
+        padding: 0.5em;
+        color: #ffffff;
+        background-color: #000000;
+        clear: left;
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="nav">
+            <ul>
+                <li style="float:right" class="down">
+                    <a href="NA.html">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </a>
+                    <div class="down-content">
+                        <a href="NA.html">Suggestion</a>
+                        <a href="NA.html">Comparison</a>
+                        <a href="NA.html">Find</a>
+                    </div>
+                </li>
+                <li><img src="./image/logo-1.jpg"></li>
+                <li><a href="NA.html"><b>Locale Finder</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--start add by rachel-->
+    <div id="main">
+        <div id="descr">
+            <h1>SEATTLE</h1>
+            <!--start modified by neha-->
+            <h2>Discover Your Locale  </h2>
+           	<!--end modified by neha-->
+            <P>Seattle, a city on Puget Sound in the Pacific Northwest, is surrounded by water, mountains and evergreen forests. It contains thousands of acres of parkland. Being the largest city of Washington, it is home to a large tech industry, with Microsoft and Amazon headquartered in its metropolitan area. The futuristic Space Needle, a 1962 World’s Fair legacy, is its most iconic landmark.
+            </P>
+            <p>
+                Locale Finder is your advisor who will help you find the right place for you to live. You will know about the crime rate,rating of the schools in that neighborhood, transportation and more in every neighborhood. You can also compare different neighborhoods based on this information. If you are new to the city, just go to our suggestions page and we will suggest you the places we picked based on low crime rate, good rated schools and public transportation.
+                <!-- This content is subject to change later. This is temporary(-Rashmitha) -->
+            </p>
+        </div>
+        <div id="start">
+          <!-- start modified by sirisha(linked to slider.html) -->
+            <a href ="html/slider.html"><button id="startbtn" class="indexPageAction"><span>GET STARTED</span></button></a>
+          <!-- end modified by sirisha -->
+        </div>
+       <!--start modified by neha-->
+        <div id="features">
+            <div id="features-suggestion" class="feature">
+                <p>Want to find a neighborhood in Seattle and have no idea which one will be your favorite? Don't worry! It's so simple...Just go ahead and answer our questionnaire and we will help you out in a jiffy.
+                </p>
+                <button class="indexPageAction">GET ADVICE</button>
+            </div>
+            <div id="features-find" class="feature">
+                <P>Want to find information regarding each and every neighborhood in Seattle? You have come to the right place. Just click on the button below and you'll find all the information you want.
+                </P>
+                <button class="indexPageAction">FIND A LOCAL</button>
+            </div>
+            <div id="features-comparation" class="feature">
+                <P>You are already familiar with few neighbohoods and not knowing which one to choose? Let us make this job much easier for you. Click on the button below to compare any two neighborhoods.
+                </P>
+                <button class="indexPageAction">COMPARE LOCAL</button>
+            </div>
+        </div>
+        <!--end modified by neha-->
+    </div>
+    <!--end add by rachel-->
+    <footer>
+        <p>About us:</p>
+        <p>Copyright &copy; </p>
+    </footer>
+    <!--start add by rachel-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--end add by rachel-->
+</body>
+
+</html>
